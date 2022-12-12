@@ -1,0 +1,82 @@
+// || Reset
+html{
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+// || General 
+body{
+  align-items:center;
+  background-color: #fff0d4;
+  display: flex;
+  font-family: "Times new roman", serif;
+  justify-content: center;
+  text-align: center;
+  min-height: 100%;
+}
+
+.btn{
+  background-color: #d6e6ff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 1em 1.5em;
+  &:hover{
+    opacity: 0.6;
+  }
+
+  & + .btn{
+    margin-left: 1em;
+  }
+}
+
+// || Game 
+.title{
+  margin-bottom: 1em;
+  text-transform: capitalize;
+}
+
+// || Game board 
+.container{
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+  width: 22.5rem;
+  height: 18.75rem;
+}
+
+.hole{
+  background-color: #ffffea;
+  border: 1px solid #aaaa;
+  border-radius: 50%; 
+  cursor: pointer;
+  height: 6.25rem;
+  width: 6.25rem;
+  transition: background-color 200ms ease-in;
+
+  &:hover{
+    opacity: 0.6;
+  }
+
+  &.active{
+    background-color: #fbe0e0;
+  }
+}
+
+/* || Score */
+.score-display{
+  font-size: 1.15rem;
+  padding: 1em;
+  margin-bottom: 1em;
+}
